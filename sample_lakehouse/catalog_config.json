@@ -1,0 +1,8 @@
+{
+  "silver/sales/orders": {
+    "derived_from": ["bronze/orders_raw/orders_bronze.csv"]
+  },
+  "silver/sales/orders_legacy": {
+    "derived_from": ["bronze/orders_raw/orders_bronze.csv"]
+  }
+}

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+
+# Generated catalog artifacts (rebuild with semantic_layer.py)
+catalog_semantic.html
+catalog_semantic.json

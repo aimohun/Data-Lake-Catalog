@@ -1,3 +1,4 @@
+import html
 import json
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -250,11 +251,14 @@ def main() -> None:
         if selected_asset:
             report = next(report for report in reports if report.relative_path == selected_asset)
             st.markdown(f"### {report.relative_path}")
+            table_description = describe(semantic_data["config"], report.relative_path) if semantic_data.get("config") else None
+            description_html = html.escape(table_description) if table_description else "(no table description)"
             st.markdown(
                 f"<div class='asset-card'><div style='display:flex;gap:1rem;align-items:center;'>"
                 f"<span class='badge'>{report.asset_type}</span>"
                 f"<div><strong>{len(report.schema)} fields</strong></div></div>"
-                f"<p><strong>Derived from:</strong> {', '.join(report.derived_from) if report.derived_from else '(none)'}</p></div>",
+                f"<p><strong>Derived from:</strong> {', '.join(report.derived_from) if report.derived_from else '(none)'}</p>"
+                f"<p style='margin:0.5rem 0 0;color:#4b5563;'><strong>Description:</strong> {description_html}</p></div>",
                 unsafe_allow_html=True,
             )
 
@@ -291,6 +295,20 @@ def main() -> None:
         if missing:
             st.warning(f"Assets missing descriptions: {len(missing)}")
             st.write(missing)
+
+        st.markdown("---")
+        st.markdown("### Table descriptions")
+        if enriched:
+            description_rows = [
+                {
+                    "asset": item["relative_path"],
+                    "description": item.get("description") or "(no description)",
+                }
+                for item in enriched
+            ]
+            st.dataframe(description_rows, use_container_width=True)
+        else:
+            st.info("No semantic catalog data available to display table descriptions.")
 
     with tab_config:
         st.markdown("### Configuration sources")

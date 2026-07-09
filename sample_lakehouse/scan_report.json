@@ -9,31 +9,31 @@
       },
       {
         "name": "order_date",
-        "dtype": "object"
+        "dtype": "str"
       },
       {
         "name": "customer_id",
-        "dtype": "object"
+        "dtype": "str"
       },
       {
         "name": "product_id",
-        "dtype": "object"
+        "dtype": "str"
       },
       {
         "name": "category",
-        "dtype": "object"
+        "dtype": "str"
       },
       {
         "name": "state",
-        "dtype": "object"
+        "dtype": "str"
       },
       {
         "name": "channel",
-        "dtype": "object"
+        "dtype": "str"
       },
       {
         "name": "payment_type",
-        "dtype": "object"
+        "dtype": "str"
       },
       {
         "name": "qty",
@@ -57,7 +57,7 @@
       },
       {
         "name": "_raw_source_file",
-        "dtype": "object"
+        "dtype": "str"
       }
     ],
     "history": null,
@@ -85,11 +85,11 @@
     "schema": [
       {
         "name": "relative_path",
-        "dtype": "object"
+        "dtype": "str"
       },
       {
         "name": "asset_type",
-        "dtype": "object"
+        "dtype": "str"
       },
       {
         "name": "schema",

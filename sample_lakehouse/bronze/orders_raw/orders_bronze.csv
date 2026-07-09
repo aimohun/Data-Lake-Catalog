@@ -1,0 +1,104 @@
+order_id,order_date,customer_id,product_id,category,state,channel,payment_type,qty,price,discount,fulfilled,shipping_days,_raw_source_file
+1,2026-06-06,CUS-000029,SKU-00002,Electronics,NY,in_store,gift_card,12,35.24,22.22,True,10.0,pos_export_2026_06_01.csv
+2,06/04/2026,CUS-000009,SKU-00002,Apparel,NY,in_store,credit_card,9,63.66,19.5,True,4.0,pos_export_2026_06_01.csv
+3,2026-06-04,CUS-000072,SKU-00052,Pet Supplies,TX,phone,debit_card,6,86.97,6.46,True,2.0,pos_export_2026_06_01.csv
+4,2026-06-01,CUS-000098,SKU-00007,Home Goods,FL,phone,paypal,1,N/A,16.09,True,7.0,pos_export_2026_06_01.csv
+5,2026-06-01,CUS-000142,SKU-00019,Beauty,FL,phone,gift_card,12,25.52,19.84,True,2.0,pos_export_2026_06_01.csv
+6,2026-06-07,CUS-000060,SKU-00056,Apparel,IL,online,debit_card,11,251.06,4.88,True,11.0,pos_export_2026_06_01.csv
+7,2026-06-03,CUS-000019,SKU-00039,Toys,GA,phone,gift_card,3,141.37,8.1,True,12.0,pos_export_2026_06_01.csv
+8,2026-06-05,CUS-000057,SKU-00044,Home Goods,AL,in_store,credit_card,6,123.34,1.99,True,10.0,pos_export_2026_06_01.csv
+9,2026-06-06,CUS-000081,SKU-00014,Sports,IL,phone,debit_card,3,83.14,7.4,True,5.0,pos_export_2026_06_01.csv
+10,2026-06-06,CUS-000150,SKU-00028,Beauty,IL,online,gift_card,3,155.31,2.73,False,2.0,pos_export_2026_06_01.csv
+11,2026-06-02,CUS-000041,SKU-00051,Grocery,NC,in_store,debit_card,7,180.79,14.04,True,9.0,pos_export_2026_06_01.csv
+12,2026-06-07,CUS-000003,SKU-00044,Apparel,GA,online,paypal,2,91.58,4.74,False,12.0,pos_export_2026_06_01.csv
+13,2026-06-06,CUS-000068,SKU-00033,Toys,GA,in_store,paypal,11,154.76,5.97,True,3.0,pos_export_2026_06_01.csv
+14,2026-06-05,CUS-000136,SKU-00059,Pet Supplies,NC,online,debit_card,1,38.0,10.89,True,13.0,pos_export_2026_06_01.csv
+15,2026-06-03,CUS-000062,SKU-00004,Automotive,NC,in_store,credit_card,12,148.37,2.08,True,13.0,pos_export_2026_06_01.csv
+16,2026-06-02,CUS-000033,SKU-00043,Sports,GA,in_store,paypal,9,262.37,12.69,True,9.0,pos_export_2026_06_01.csv
+17,2026-06-07,CUS-000052,SKU-00046,Electronics,IL,phone,paypal,8,270.39,13.54,True,2.0,pos_export_2026_06_01.csv
+18,2026-06-03,CUS-000006,SKU-00038,Books,NY,phone,gift_card,1,N/A,18.93,True,1.0,pos_export_2026_06_01.csv
+19,2026-06-07,CUS-000085,SKU-00005,Books,NY,online,debit_card,4,164.07,21.7,True,10.0,pos_export_2026_06_01.csv
+20,2026-06-04,CUS-000063,SKU-00051,Sports,IL,in_store,credit_card,2,199.4,10.63,True,14.0,pos_export_2026_06_01.csv
+21,2026-06-06,CUS-000014,SKU-00044,Apparel,AL,online,paypal,2,78.35,5.71,True,7.0,pos_export_2026_06_01.csv
+22,2026-06-02,CUS-000072,SKU-00030,Automotive,CA,online,credit_card,1,197.38,16.22,False,2.0,pos_export_2026_06_01.csv
+23,2026-06-07,CUS-000061,SKU-00011,Grocery,OH,online,gift_card,7,271.22,4.94,False,7.0,pos_export_2026_06_01.csv
+24,2026-06-03,CUS-000117,SKU-00019,Grocery,GA,phone,debit_card,3,61.02,6.53,False,12.0,pos_export_2026_06_01.csv
+25,2026-06-05,CUS-000016,SKU-00048,Home Goods,AL,in_store,debit_card,9,276.22,15.93,False,9.0,pos_export_2026_06_01.csv
+26,2026-06-01,CUS-000048,SKU-00005,Beauty,CA,phone,gift_card,7,40.37,26.71,True,10.0,pos_export_2026_06_01.csv
+27,2026-06-01,CUS-000021,SKU-00027,Beauty,NC,phone,paypal,5,65.26,21.49,True,7.0,pos_export_2026_06_01.csv
+28,2026-06-02,CUS-000077,SKU-00030,Home Goods,CA,in_store,debit_card,10,299.54,29.88,False,4.0,pos_export_2026_06_01.csv
+29,2026-06-05,CUS-000068,SKU-00009,Home Goods,CA,in_store,paypal,5,51.54,25.01,True,10.0,pos_export_2026_06_01.csv
+30,2026-06-07,CUS-000136,SKU-00001,Books,WA,phone,credit_card,3,83.02,26.69,True,3.0,pos_export_2026_06_01.csv
+31,06/03/2026,CUS-000073,SKU-00039,Automotive,FL,in_store,paypal,9,149.12,27.16,True,2.0,pos_export_2026_06_01.csv
+32,2026-06-06,CUS-000109,SKU-00054,Electronics,AL,in_store,paypal,3,192.95,7.86,True,9.0,pos_export_2026_06_01.csv
+33,2026-06-06,CUS-000110,SKU-00036,Pet Supplies,CA,in_store,gift_card,9,15.63,11.08,True,7.0,pos_export_2026_06_01.csv
+34,2026-06-02,CUS-000011,SKU-00020,Home Goods,AL,online,gift_card,11,78.61,3.08,True,14.0,pos_export_2026_06_01.csv
+35,2026-06-04,CUS-000040,SKU-00060,Automotive,TX,in_store,debit_card,1,57.91,27.73,True,7.0,pos_export_2026_06_01.csv
+36,2026-06-07,CUS-000064,SKU-00018,Toys,CA,online,credit_card,8,70.62,24.5,True,5.0,pos_export_2026_06_01.csv
+37,2026-06-07,CUS-000059,SKU-00015,Pet Supplies,NY,online,paypal,5,259.98,29.01,True,11.0,pos_export_2026_06_01.csv
+38,2026-06-05,CUS-000103,SKU-00044,Books,FL,in_store,credit_card,5,57.68,28.88,True,2.0,pos_export_2026_06_01.csv
+39,2026-06-05,CUS-000112,SKU-00023,Home Goods,IL,phone,credit_card,7,270.35,5.7,False,7.0,pos_export_2026_06_01.csv
+40,2026-06-01,CUS-000134,SKU-00060,Books,NY,online,debit_card,2,284.92,27.62,True,11.0,pos_export_2026_06_01.csv
+41,2026-06-07,CUS-000032,SKU-00047,Electronics,GA,online,debit_card,6,123.71,8.87,True,7.0,pos_export_2026_06_01.csv
+42,2026-06-06,CUS-000098,SKU-00044,Toys,NC,phone,paypal,7,166.64,0.01,True,7.0,pos_export_2026_06_01.csv
+43,2026-06-07,CUS-000149,SKU-00039,Home Goods,OH,online,debit_card,11,N/A,14.2,True,13.0,pos_export_2026_06_01.csv
+44,2026-06-06,CUS-000044,SKU-00043,Apparel,WA,phone,paypal,2,246.43,22.53,True,4.0,pos_export_2026_06_01.csv
+45,2026-06-07,CUS-000051,SKU-00010,Pet Supplies,AL,in_store,debit_card,10,255.67,2.18,True,11.0,pos_export_2026_06_01.csv
+46,2026-06-05,CUS-000050,SKU-00046,Grocery,OH,online,gift_card,3,198.54,0.17,True,13.0,pos_export_2026_06_01.csv
+47,2026-06-01,CUS-000109,SKU-00015,Toys,GA,online,credit_card,9,78.51,25.45,True,13.0,pos_export_2026_06_01.csv
+48,2026-06-04,CUS-000136,SKU-00036,Beauty,FL,online,debit_card,9,136.54,4.77,True,8.0,pos_export_2026_06_01.csv
+49,2026-06-03,CUS-000064,SKU-00054,Electronics,GA,online,gift_card,5,134.76,21.41,True,6.0,pos_export_2026_06_01.csv
+50,2026-06-03,CUS-000139,SKU-00006,Toys,TX,in_store,debit_card,12,50.08,6.42,True,6.0,pos_export_2026_06_01.csv
+51,2026-06-05,CUS-000120,SKU-00027,Pet Supplies,NY,online,debit_card,10,284.09,0.59,True,10.0,pos_export_2026_06_01.csv
+52,2026-06-04,CUS-000123,SKU-00001,Home Goods,WA,online,debit_card,9,225.52,16.38,True,4.0,pos_export_2026_06_01.csv
+53,2026-06-04,CUS-000057,SKU-00018,Grocery,OH,in_store,debit_card,6,202.32,23.94,True,14.0,pos_export_2026_06_01.csv
+54,2026-06-04,CUS-000033,SKU-00040,Books,AL,online,credit_card,2,194.61,4.07,True,1.0,pos_export_2026_06_01.csv
+55,2026-06-03,CUS-000098,SKU-00021,Automotive,OH,online,paypal,7,87.09,28.54,True,14.0,pos_export_2026_06_01.csv
+56,2026-06-01,CUS-000121,SKU-00002,Books,AL,online,gift_card,11,25.24,28.72,False,1.0,pos_export_2026_06_01.csv
+57,2026-06-02,CUS-000052,SKU-00054,Pet Supplies,NC,in_store,gift_card,3,144.7,3.43,True,8.0,pos_export_2026_06_01.csv
+58,2026-06-06,CUS-000066,SKU-00050,Home Goods,TX,phone,credit_card,3,289.59,3.24,False,5.0,pos_export_2026_06_01.csv
+59,2026-06-05,CUS-000097,SKU-00026,Automotive,CA,phone,gift_card,2,210.67,9.05,True,13.0,pos_export_2026_06_01.csv
+60,2026-06-01,CUS-000145,SKU-00051,Pet Supplies,FL,phone,debit_card,11,114.32,15.18,True,14.0,pos_export_2026_06_01.csv
+61,2026-06-04,CUS-000126,SKU-00007,Grocery,FL,phone,debit_card,12,50.13,5.28,True,11.0,pos_export_2026_06_01.csv
+62,2026-06-03,CUS-000138,SKU-00050,Sports,OH,online,paypal,6,256.26,24.92,True,8.0,pos_export_2026_06_01.csv
+63,2026-06-02,CUS-000119,SKU-00037,Beauty,IL,online,credit_card,8,256.03,5.46,True,13.0,pos_export_2026_06_01.csv
+64,2026-06-03,CUS-000088,SKU-00018,Beauty,WA,phone,credit_card,9,284.68,2.57,True,8.0,pos_export_2026_06_01.csv
+65,2026-06-05,CUS-000062,SKU-00045,Sports,OH,online,credit_card,2,91.8,12.13,True,11.0,pos_export_2026_06_01.csv
+66,2026-06-05,CUS-000095,SKU-00031,Books,GA,online,debit_card,12,167.36,10.55,True,5.0,pos_export_2026_06_01.csv
+67,2026-06-03,CUS-000060,SKU-00008,Automotive,FL,in_store,gift_card,4,68.83,14.53,True,13.0,pos_export_2026_06_01.csv
+68,2026-06-05,CUS-000073,SKU-00007,Automotive,WA,in_store,paypal,3,94.17,21.24,True,1.0,pos_export_2026_06_01.csv
+69,2026-06-01,CUS-000142,SKU-00019,Toys,OH,in_store,credit_card,10,88.88,14.36,True,1.0,pos_export_2026_06_01.csv
+70,2026-06-03,CUS-000123,SKU-00008,Apparel,IL,online,credit_card,10,190.69,1.61,True,10.0,pos_export_2026_06_01.csv
+71,2026-06-03,CUS-000022,SKU-00016,Apparel,GA,online,gift_card,9,117.21,27.26,True,10.0,pos_export_2026_06_01.csv
+72,2026-06-04,CUS-000079,SKU-00037,Beauty,AL,phone,credit_card,4,189.53,7.94,True,4.0,pos_export_2026_06_01.csv
+73,2026-06-02,CUS-000142,SKU-00005,Toys,AL,online,debit_card,12,180.17,8.74,True,12.0,pos_export_2026_06_01.csv
+74,2026-06-03,CUS-000117,SKU-00005,Automotive,WA,phone,gift_card,7,38.86,6.74,True,5.0,pos_export_2026_06_01.csv
+75,2026-06-07,CUS-000037,SKU-00005,Pet Supplies,TX,online,paypal,8,41.68,20.66,True,5.0,pos_export_2026_06_01.csv
+76,2026-06-05,CUS-000139,SKU-00032,Sports,CA,phone,credit_card,7,221.69,18.11,False,4.0,pos_export_2026_06_01.csv
+77,2026-06-06,CUS-000148,SKU-00038,Pet Supplies,WA,phone,credit_card,3,143.8,19.55,True,3.0,pos_export_2026_06_01.csv
+78,2026-06-05,CUS-000112,SKU-00041,Sports,CA,online,paypal,7,103.33,20.1,True,6.0,pos_export_2026_06_01.csv
+79,2026-06-04,CUS-000127,SKU-00019,Grocery,GA,in_store,debit_card,2,97.78,9.7,True,7.0,pos_export_2026_06_01.csv
+80,2026-06-07,CUS-000132,SKU-00053,Pet Supplies,GA,online,debit_card,1,60.34,10.85,True,11.0,pos_export_2026_06_01.csv
+81,2026-06-04,CUS-000014,SKU-00014,Electronics,GA,in_store,paypal,8,264.85,14.54,False,11.0,pos_export_2026_06_01.csv
+82,2026-06-05,CUS-000062,SKU-00046,Toys,WA,phone,credit_card,9,125.36,6.74,True,2.0,pos_export_2026_06_01.csv
+83,2026-06-04,CUS-000031,SKU-00042,Toys,OH,phone,paypal,9,213.1,12.46,True,8.0,pos_export_2026_06_01.csv
+84,2026-06-02,CUS-000117,SKU-00036,Toys,IL,in_store,gift_card,2,86.49,23.7,True,13.0,pos_export_2026_06_01.csv
+85,2026-06-05,CUS-000069,SKU-00053,Pet Supplies,WA,phone,paypal,10,176.08,19.8,True,8.0,pos_export_2026_06_01.csv
+86,2026-06-05,CUS-000124,SKU-00023,Home Goods,GA,phone,debit_card,8,280.19,26.09,True,4.0,pos_export_2026_06_01.csv
+87,2026-06-05,CUS-000099,SKU-00015,Grocery,AL,online,debit_card,12,274.46,11.44,True,13.0,pos_export_2026_06_01.csv
+88,2026-06-07,CUS-000039,SKU-00032,Pet Supplies,TX,phone,paypal,2,262.89,13.21,True,8.0,pos_export_2026_06_01.csv
+89,2026-06-01,CUS-000037,SKU-00027,Toys,CA,online,paypal,6,188.86,11.92,True,6.0,pos_export_2026_06_01.csv
+90,2026-06-07,CUS-000137,SKU-00025,Home Goods,OH,phone,credit_card,10,25.18,18.93,True,4.0,pos_export_2026_06_01.csv
+91,2026-06-06,CUS-000024,SKU-00028,Apparel,CA,online,gift_card,12,93.34,0.87,True,1.0,pos_export_2026_06_01.csv
+92,2026-06-03,CUS-000092,SKU-00024,Grocery,TX,in_store,debit_card,10,206.13,5.4,True,10.0,pos_export_2026_06_01.csv
+93,2026-06-07,CUS-000098,SKU-00040,Automotive,OH,phone,gift_card,4,141.04,7.62,True,1.0,pos_export_2026_06_01.csv
+94,2026-06-07,CUS-000120,SKU-00058,Electronics,GA,in_store,credit_card,8,283.84,29.63,True,7.0,pos_export_2026_06_01.csv
+95,2026-06-06,CUS-000065,SKU-00030,Electronics,NY,online,debit_card,2,74.98,17.16,True,12.0,pos_export_2026_06_01.csv
+96,2026-06-03,CUS-000006,SKU-00054,Grocery,WA,in_store,credit_card,10,224.83,24.99,True,13.0,pos_export_2026_06_01.csv
+97,2026-06-07,CUS-000059,SKU-00039,Home Goods,NY,phone,gift_card,10,78.93,22.67,True,11.0,pos_export_2026_06_01.csv
+98,2026-06-07,CUS-000036,SKU-00041,Apparel,AL,online,debit_card,1,175.97,21.97,True,5.0,pos_export_2026_06_01.csv
+99,2026-06-03,CUS-000107,SKU-00012,Automotive,TX,phone,paypal,9,153.03,8.18,True,14.0,pos_export_2026_06_01.csv
+100,2026-06-04,CUS-000076,SKU-00048,Home Goods,CA,online,credit_card,3,227.47,6.77,True,11.0,pos_export_2026_06_01.csv
+6,2026-06-07,CUS-000060,SKU-00056,Apparel,IL,online,debit_card,11,251.06,4.88,True,11.0,pos_export_2026_06_01.csv
+6,2026-06-07,CUS-000060,SKU-00056,Apparel,IL,online,debit_card,11,251.06,4.88,True,11.0,pos_export_2026_06_01.csv
+21,2026-06-06,CUS-000014,SKU-00044,Apparel,AL,online,paypal,2,78.35,5.71,True,7.0,pos_export_2026_06_01.csv

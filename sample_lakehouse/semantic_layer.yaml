@@ -1,0 +1,153 @@
+# =============================================================================
+# Semantic Layer config  (MSDS 681 - Part 2 goal: "Semantic layer for AI agents")
+# =============================================================================
+# Plain-English descriptions for every table and column in the lakehouse.
+# These cannot be inferred from the data itself -- they carry human/business
+# meaning so that a person (or an AI agent) browsing the catalog knows what each
+# asset actually represents, and how the tables relate to one another.
+#
+# Keyed by each asset's relative_path (the same id the foundation scanner emits).
+# Edit freely -- add a `description:` for the table and a line under `columns:`
+# for any column you want to explain.
+# =============================================================================
+
+assets:
+
+  bronze/orders_raw/orders_bronze.csv:
+    description: >-
+      Raw, unprocessed order lines landed straight from the source system.
+      This is the bronze source that the cleaned `silver/sales/orders` table is
+      derived from. Expect quirks: dates as strings, a `_raw_source_file`
+      lineage column, and no `discount_code`.
+    columns:
+      order_id: Unique id for the order line. Stored as int64 here (silver casts it to long).
+      order_date: Date the order was placed, as a raw string (not yet parsed to a date type).
+      customer_id: Customer who placed the order. Joins to customers.customer_id.
+      product_id: Product ordered. Joins to products.product_id.
+      category: Product category, copied onto the order line at capture time.
+      state: US state the order shipped to / was placed from.
+      channel: Sales channel the order came through (e.g. web, store, mobile).
+      payment_type: How the customer paid (e.g. card, paypal).
+      qty: Quantity of the product ordered.
+      price: Unit price charged at time of sale.
+      discount: Discount fraction/amount applied to the line.
+      fulfilled: Whether the order line was fulfilled.
+      shipping_days: Days taken to ship; null when not yet shipped.
+      _raw_source_file: Lineage column -- the source file this raw row came from.
+
+  silver/sales/orders:
+    description: >-
+      Cleaned, current order-line transactions -- the core fact table of the
+      lakehouse (what was bought, by whom, when, and for how much). Derived from
+      the bronze `orders_raw` CSV. Has the most version history in the lakehouse
+      (5 versions), and adds a `discount_code` column not present in bronze or
+      the legacy table.
+    columns:
+      order_id: Unique id for the order line. Joins to shipments.order_id and returns.order_id.
+      order_date: Date the order was placed (string).
+      customer_id: Customer who placed the order. Joins to customers.customer_id.
+      product_id: Product ordered. Joins to products.product_id.
+      category: Product category at time of sale.
+      state: US state associated with the order.
+      channel: Sales channel (web, store, mobile, ...).
+      payment_type: Payment method used.
+      qty: Quantity ordered.
+      price: Unit price charged.
+      discount: Discount applied to the line.
+      fulfilled: Whether the order was fulfilled.
+      shipping_days: Days to ship; null if unshipped.
+      discount_code: Promo code applied. NEW in silver -- absent from bronze and orders_legacy.
+
+  silver/sales/orders_legacy:
+    description: >-
+      DEPRECATED older orders table kept for historical reference. Narrower than
+      the current `orders` table -- missing category, state, channel,
+      payment_type, discount, shipping_days, and discount_code. Prefer
+      `silver/sales/orders` for anything current.
+    columns:
+      order_id: Order line id (legacy).
+      order_date: Order date (string).
+      customer_id: Customer who placed the order. Joins to customers.customer_id.
+      product_id: Product ordered. Joins to products.product_id.
+      qty: Quantity ordered.
+      price: Unit price charged.
+      fulfilled: Whether the order was fulfilled.
+
+  silver/sales/customers:
+    description: >-
+      Customer profile master data -- one row per customer. The canonical source
+      of the customer identifier used across the lakehouse.
+    columns:
+      customer_id: Canonical customer id. Referenced by orders, orders_legacy, and (as `cust_id`) returns.
+      name: Customer's display name.
+      signup_date: Date the customer signed up (string).
+      region: Sales/geographic region the customer belongs to.
+      tier: Customer loyalty/value tier (e.g. bronze, silver, gold).
+
+  silver/sales/products:
+    description: >-
+      Product catalog master data -- one row per product, with cost and pricing.
+    columns:
+      product_id: Canonical product id. Referenced by orders and inventory. (Reviews call this `product_sku`.)
+      category: Product category.
+      brand: Product brand.
+      unit_cost: What the product costs the business per unit (the "cost" in the spec).
+      list_price: Advertised list price per unit.
+
+  silver/ops/inventory:
+    description: >-
+      Stock levels per product, per warehouse -- operational inventory snapshot.
+    columns:
+      product_id: Product being stocked. Joins to products.product_id.
+      warehouse: Warehouse the stock is held in.
+      quantity_on_hand: Units currently available in that warehouse.
+      last_restock_date: Date the product was last restocked (string).
+
+  silver/ops/shipments:
+    description: >-
+      Shipment tracking -- one row per shipment, linking an order to a carrier
+      and delivery outcome.
+    columns:
+      shipment_id: Unique shipment id.
+      order_id: Order being shipped. Joins to orders.order_id.
+      carrier: Shipping carrier (e.g. UPS, FedEx).
+      ship_date: Date the shipment left (string).
+      delivery_date: Date the shipment was delivered; may be empty if in transit.
+      status: Current shipment status (e.g. in_transit, delivered).
+
+  silver/ops/returns:
+    description: >-
+      Returned orders -- reason and refund per return. NOTE the join-key naming
+      quirk: the customer column here is `cust_id`, not `customer_id` as
+      everywhere else.
+    columns:
+      return_id: Unique return id.
+      cust_id: Customer who returned the order. SAME concept as customers.customer_id (renamed here).
+      order_id: Order being returned. Joins to orders.order_id.
+      return_date: Date of the return (string).
+      reason: Free-text / coded reason for the return.
+      refund_amount: Amount refunded to the customer.
+
+  silver/marketing/marketing_campaigns:
+    description: >-
+      Marketing campaign metadata -- one row per campaign, with channel, run
+      dates, and budget.
+    columns:
+      campaign_id: Unique campaign id.
+      name: Human-readable campaign name.
+      channel: Channel the campaign ran on (email, social, search, ...).
+      start_date: Campaign start date (string).
+      end_date: Campaign end date (string).
+      budget: Campaign budget.
+
+  silver/marketing/reviews:
+    description: >-
+      Customer product reviews -- rating and review text. NOTE the join-key
+      naming quirk: the product column here is `product_sku`, which is the SAME
+      concept as `product_id` everywhere else in the lakehouse.
+    columns:
+      review_id: Unique review id.
+      product_sku: Product being reviewed. SAME concept as products.product_id (renamed here).
+      rating: Numeric star rating given by the customer.
+      review_text: Free-text body of the review.
+      review_date: Date the review was written (string).
